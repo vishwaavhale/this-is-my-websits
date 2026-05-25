@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Codingwale vaijapur</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    header{
+      background:#111827;
+      padding:15px 8%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px 8%;
+      background:linear-gradient(to right,#0f172a,#1e293b);
+    }
+
+    .hero-content h1{
+      font-size:55px;
+      margin-bottom:20px;
+      color:#38bdf8;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      max-width:850px;
+      margin:auto;
+      margin-bottom:30px;
+      color:#d1d5db;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:#38bdf8;
+      color:black;
+      font-weight:bold;
+      border-radius:8px;
+      margin:10px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:scale(1.05);
+    }
+
+    .terminal{
+      margin-top:40px;
+      background:black;
+      padding:20px;
+      border-radius:10px;
+      text-align:left;
+      max-width:600px;
+      margin-left:auto;
+      margin-right:auto;
+      color:#00ff88;
+      font-family:monospace;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:70px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:40px;
+      color:#38bdf8;
+    }
+
+    /* TECHNOLOGY */
+
+    .tech-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+    }
+
+    .tech-box{
+      background:#1e293b;
+      padding:20px;
+      text-align:center;
+      border-radius:10px;
+      transition:0.3s;
+      border:1px solid #334155;
+    }
+
+    .tech-box:hover{
+      transform:translateY(-5px);
+      background:#334155;
+    }
+
+    /* COURSE */
+
+    .course-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .course-card{
+      background:#1e293b;
+      border-radius:12px;
+      padding:25px;
+      transition:0.3s;
+      border:1px solid #334155;
+    }
+
+    .course-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .course-card h3{
+      color:#38bdf8;
+      margin-bottom:10px;
+    }
+
+    .course-card p{
+      color:#d1d5db;
+      margin-bottom:10px;
+    }
+
+    .tags{
+      margin:15px 0;
+    }
+
+    .tags span{
+      display:inline-block;
+      background:#0f172a;
+      padding:6px 12px;
+      margin:5px;
+      border-radius:20px;
+      font-size:14px;
+      border:1px solid #475569;
+    }
+
+    /* REVIEWS */
+
+    .review-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .review-card{
+      background:#1e293b;
+      padding:25px;
+      border-radius:12px;
+      border:1px solid #334155;
+    }
+
+    .stars{
+      color:gold;
+      font-size:20px;
+      margin:10px 0;
+    }
+
+    /* ABOUT */
+
+    .about{
+      background:#111827;
+      border-radius:15px;
+      padding:40px;
+      text-align:center;
+    }
+
+    .about h3{
+      color:#38bdf8;
+      margin-top:20px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:#1e293b;
+      padding:40px;
+      border-radius:15px;
+      text-align:center;
+    }
+
+    .contact-box p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:black;
+      padding:30px;
+      text-align:center;
+      color:#94a3b8;
+    }
+
+    footer h2{
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:38px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <nav>
+      <div class="logo">Codingwale</div>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>coding wale vaijapur</h1>
+
+      <p>
+        Learn Real Tech Skills. Build Real Projects.
+        Codingwale is a practical coding academy where students learn MERN stack,
+        DevOps, Java full stack, frontend basics, and Linux through real-world practice.
+      </p>
+
+      <a href="#courses" class="btn">Explore Courses</a>
+      <a href="#contact" class="btn">Join Now</a>
+
+      <div class="terminal">
+        <p>$ git clone success</p>
+        <p>$ cd codingwale</p>
+        <p>$ npm run career</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TECHNOLOGIES -->
+
+  <section>
+
+    <h2 class="section-title">Technologies You Learn</h2>
+
+    <div class="tech-grid">
+
+      <div class="Michroma">HTML</div>
+      <div class="tech-box">CSS</div>
+      <div class="tech-box">JavaScript</div>
+      <div class="tech-box">Bootstrap</div>
+      <div class="tech-box">Tailwind CSS</div>
+      <div class="tech-box">React</div>
+      <div class="tech-box">Redux</div>
+      <div class="tech-box">Node.js</div>
+      <div class="tech-box">Express.js</div>
+      <div class="tech-box">MongoDB</div>
+      <div class="tech-box">MySQL</div>
+      <div class="tech-box">MERN Stack</div>
+      <div class="tech-box">Java Full Stack</div>
+      <div class="tech-box">Spring Boot</div>
+      <div class="tech-box">DevOps</div>
+      <div class="tech-box">Docker</div>
+      <div class="tech-box">Kubernetes</div>
+      <div class="tech-box">Git</div>
+      <div class="tech-box">GitHub</div>
+      <div class="tech-box">Jenkins</div>
+      <div class="tech-box">Linux</div>
+      <div class="tech-box">Red Hat</div>
+      <div class="tech-box">SQL</div>
+      <div class="tech-box">Excel</div>
+      <div class="tech-box">Power BI</div>
+      <div class="tech-box">Python</div>
+
+    </div>
+
+  </section>
+
+  <!-- COURSES -->
+
+  <section id="courses">
+
+    <h2 class="section-title">Courses</h2>
+
+    <div class="course-grid">
+
+      <div class="course-card">
+        <h3>MERN Stack Development</h3>
+        <p>Duration: 3-4 Months</p>
+        <p>Build full-stack web applications from scratch.</p>
+
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>MongoDB</span>
+          <span>React</span>
+          <span>Node.js</span>
+        </div>
+
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+
+      <div class="course-card">
+        <h3>DevOps Engineering</h3>
+        <p>Duration: 3-4 Months</p>
+        <p>Master deployment and automation workflows.</p>
+
+        <div class="tags">
+          <span>Git</span>
+          <span>Linux</span>
+          <span>Docker</span>
+          <span>Jenkins</span>
+          <span>CI/CD</span>
+        </div>
+
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+
+      <div class="course-card">
+        <h3>Java Full Stack</h3>
+        <p>Duration: 3-4 Months</p>
+        <p>Develop production-ready Java applications.</p>
+
+        <div class="tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>REST APIs</span>
+          <span>Database</span>
+        </div>
+
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+
+      <div class="course-card">
+        <h3>Frontend Development</h3>
+        <p>Duration: 3-4 Months</p>
+        <p>Create modern responsive user interfaces.</p>
+
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Bootstrap</span>
+          <span>JavaScript</span>
+        </div>
+
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+
+      <div class="course-card">
+        <h3>Red Hat Linux</h3>
+        <p>Duration: 3-4 Months</p>
+        <p>Learn Linux administration and shell scripting.</p>
+
+        <div class="tags">
+          <span>Linux</span>
+          <span>Networking</span>
+          <span>Permissions</span>
+          <span>Shell Script</span>
+        </div>
+
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+
+      <div class="course-card">
+        <h3>Data Analytics</h3>
+        <p>Duration: 3-4 Months</p>
+        <p>Analyze and visualize business data.</p>
+
+        <div class="tags">
+          <span>SQL</span>
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>Python</span>
+        </div>
+
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- REVIEWS -->
+
+  <section id="reviews">
+
+    <h2 class="section-title">Student Reviews</h2>
+
+    <div class="review-grid">
+
+      <div class="review-card">
+        <h3>vishwa avhale</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Codingwale offers well-structured coding classes that cover everything
+          from basics to advanced concepts with practical learning.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>SWayambhu lande</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Amazing teaching experience and practical project-based learning.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>shivam avhale</h3>
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Top classes in Vaijapur for coding and real technical skills.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="section-title">About Codingwale</h2>
+
+    <div class="about">
+
+      <p>
+        Codingwale is a programming academy focused on practical learning.
+        Our mission is to develop skilled students into capable engineers
+        and confident programmers through real-world coding experience.
+      </p>
+
+      <h3>Pankaj Thibhuwan</h3>
+
+      <p>Founder & Instructor</p>
+
+      <p>
+        Teaching practical full stack development and DevOps with real project workflows.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-box">
+
+      <p><strong>Phone:</strong> +91 91681 63938</p>
+
+      <p><strong>WhatsApp:</strong> Chat Now</p>
+
+      <p><strong>Location:</strong> Vaijapur, India</p>
+
+      <p><strong>Email:</strong> codingwale@gmail.com</p>
+
+      <a href="#" class="btn">Call Now</a>
+      <a href="#" class="btn">WhatsApp</a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>Codingwale</h2>
+
+    <p>
+      Practical coding education from basic to advanced with real-world hands-on training.
+    </p>
+
+    <br>
+
+    <p>© 2026 Codingwale. All Rights Reserved.</p>
+
+  </footer>
+
+</body>
+</html>
