@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Security Guard Services</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    background:black;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:35px;
+    color:gold;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+/* Hero Section */
+
+.hero{
+    height:95vh;
+    background:url(https://www.promansecuritech.com/wp-content/uploads/2019/05/bouncer-services.jpg);
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.7);
+    padding:50px;
+    border-radius:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.hero-content button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:gold;
+    color:black;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:white;
+}
+
+/* Services */
+
+.services{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.services h2{
+    font-size:50px;
+    color:gold;
+    margin-bottom:50px;
+}
+
+.service-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:330px;
+    background:#1b1b1b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(255,215,0,0.2);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    font-size:32px;
+    margin:20px 0;
+    color:gold;
+}
+
+.card p{
+    padding:0 20px;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.price{
+    margin:20px 0;
+    font-size:26px;
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.book-btn{
+    margin-bottom:25px;
+    padding:12px 25px;
+    border:none;
+    background:gold;
+    color:black;
+    font-size:18px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.book-btn:hover{
+    background:white;
+}
+
+/* Pricing Table */
+
+.pricing{
+    padding:80px 50px;
+    background:#111;
+    text-align:center;
+}
+
+.pricing h2{
+    font-size:50px;
+    color:gold;
+    margin-bottom:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+}
+
+table th{
+    background:gold;
+    color:black;
+    padding:20px;
+    font-size:22px;
+}
+
+table td{
+    padding:20px;
+    border:1px solid #333;
+    font-size:20px;
+}
+
+table tr:nth-child(even){
+    background:#1c1c1c;
+}
+
+/* About */
+
+.about{
+    padding:80px 60px;
+    text-align:center;
+}
+
+.about h2{
+    font-size:50px;
+    color:gold;
+    margin-bottom:30px;
+}
+
+.about p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* Gallery */
+
+.gallery{
+    padding:80px 50px;
+    background:#111;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:50px;
+    color:gold;
+    margin-bottom:40px;
+}
+
+.gallery-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.gallery-container img{
+    width:350px;
+    height:250px;
+    border-radius:20px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+}
+
+/* Contact */
+
+.contact{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:50px;
+    color:gold;
+    margin-bottom:40px;
+}
+
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:#1a1a1a;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,215,0,0.2);
+}
+
+.contact-box p{
+    font-size:22px;
+    margin:20px 0;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+}
+
+.contact-box button{
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:gold;
+    color:black;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+footer p{
+    font-size:18px;
+    color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">Royal Security</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Security Guard & Bouncer Services</h1>
+
+<p>Professional Security For Events, Offices, Hotels & VIP Protection</p>
+
+<button>Hire Now</button>
+
+</div>
+
+</section>
+
+<!-- Services -->
+
+<section class="services" id="services">
+
+<h2>Our Security Team</h2>
+
+<div class="service-container">
+
+<div class="card">
+
+<img src="https://wensforce.com/wp-content/uploads/Security-bouncer-1.webp">
+
+<h3>Security Guard</h3>
+
+<p>Professional trained guards for office, school, mall and building security.</p>
+
+<div class="price">₹1500 / Day</div>
+
+<button class="book-btn">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://4.imimg.com/data4/TF/NI/MY-10813464/bouncers-security-service-500x500.jpg">
+
+<h3>VIP Bouncer</h3>
+
+<p>Strong and experienced bouncers for VIP parties and celebrity events.</p>
+
+<div class="price">₹3500 / Day</div>
+
+<button class="book-btn">Book Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM7k6N2ilBclKspnkVkHzHaDBglBcheQ6oQ&s">
+
+<h3>Night Guard</h3>
+
+<p>Night shift guards with complete safety and emergency handling skills.</p>
+
+<div class="price">₹2200 / Night</div>
+
+<button class="book-btn">Book Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Pricing -->
+
+<section class="pricing" id="pricing">
+
+<h2>Monthly & Daily Pricing</h2>
+
+<table>
+
+<tr>
+<th>Service</th>
+<th>Daily Price</th>
+<th>Monthly Price</th>
+<th>Timing</th>
+</tr>
+
+<tr>
+<td>Security Guard</td>
+<td>₹1500</td>
+<td>₹40,000</td>
+<td>12 Hours</td>
+</tr>
+
+<tr>
+<td>VIP Bouncer</td>
+<td>₹3500</td>
+<td>₹90,000</td>
+<td>10 Hours</td>
+</tr>
+
+<tr>
+<td>Night Security</td>
+<td>₹2200</td>
+<td>₹55,000</td>
+<td>Night Shift</td>
+</tr>
+
+<tr>
+<td>Event Security</td>
+<td>₹5000</td>
+<td>Custom Package</td>
+<td>Full Event</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- About -->
+
+<section class="about">
+
+<h2>About Our Company</h2>
+
+<p>
+vishwa Security Services provides professional security guards and bouncers 
+for offices, events, hotels, schools, VIP protection and private security.
+Our trained staff provides trusted and disciplined security service 
+with 24/7 customer support.
+</p>
+
+</section>
+
+<!-- Gallery -->
+
+<section class="gallery" id="gallery">
+
+
+ 
+
+
+</section>
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Our Office</h2>
+
+<div class="contact-box">
+
+<p><strong>Office Name:</strong> vishwa Security Guard Services</p>
+
+<p><strong>Phone Number:</strong> +9100000000</p>
+
+<p><strong>Emergency Contact:</strong> +91 00000000000</p>
+
+<p><strong>Email Address:</strong> vishwasecurity@gmail.com</p>
+
+<p><strong>Office Address:</strong>At aghur post Rotegaon,vaijapur, Maharashtra, India</p>
+
+<input type="text" placeholder="Enter Your Name">
+
+<input type="email" placeholder="Enter Your Email">
+
+<textarea rows="5" placeholder="Write Your Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>© 2026 vishwa Security Guard Services | Designed By Vishwa</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Mess Service</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(to right,#ff6600,#ff9900);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* NAVBAR */
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:orange;
+}
+
+/* HERO SECTION */
+.hero{
+    height:500px;
+    background:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:55px;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:10px;
+}
+
+/* SECTION */
+section{
+    padding:50px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:40px;
+    color:#ff6600;
+}
+
+/* FOOD ITEMS */
+.food-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.food-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.food-card:hover{
+    transform:scale(1.05);
+}
+
+.food-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.food-card h3{
+    padding:10px;
+    color:#ff6600;
+}
+
+.food-card p{
+    padding:0 10px 15px;
+}
+
+/* MONTHLY PRICE */
+.price-box{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+.price-box h2{
+    color:#ff6600;
+    margin-bottom:20px;
+}
+
+.price-box p{
+    font-size:22px;
+    margin:10px;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+/* HYGIENE */
+.hygiene{
+    background:#fff3e0;
+    padding:30px;
+    border-radius:10px;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* LOGIN FORM */
+form{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    max-width:500px;
+    margin:auto;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+form input, form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+form button{
+    background:#ff6600;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+form button:hover{
+    background:#e65c00;
+}
+
+/* CONTACT */
+.contact{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.contact p{
+    margin:10px;
+    font-size:18px;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Vishwa Food Mess</h1>
+    <p>Healthy • Hygienic • Homemade Food</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Food Menu</a>
+    <a href="#">Monthly Plans</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+    <a href="#">Login</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h2>Best Mess & Tiffin Service</h2>
+</div>
+
+<!-- FOOD ITEMS -->
+<section>
+    <h2 class="section-title">Our Food Items</h2>
+
+    <div class="food-container">
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+            <h3>Veg Thali</h3>
+            <p>Rice, Roti, Dal, Sabji, Salad</p>
+            <p><b>Price:</b> ₹120</p>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+            <h3>Paneer Dish</h3>
+            <p>Fresh Paneer with Butter Roti</p>
+            <p><b>Price:</b> ₹180</p>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+            <h3>Chicken Thali</h3>
+            <p>Chicken Curry, Rice & Roti</p>
+            <p><b>Price:</b> ₹220</p>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
+            <h3>Tiffin Service</h3>
+            <p>Healthy Homemade Tiffin</p>
+            <p><b>Price:</b> ₹90</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MONTHLY PRICE -->
+<section>
+    <h2 class="section-title">Monthly Plans</h2>
+
+    <div class="price-box">
+        <h2>Affordable Monthly Mess Plans</h2>
+        <p>Veg Monthly Plan - ₹3000</p>
+        <p>Special Veg Plan - ₹4500</p>
+        <p>Non-Veg Monthly Plan - ₹6000</p>
+        <p>Tiffin Monthly Plan - ₹2500</p>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2 class="section-title">Our Gallery</h2>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d" alt="Cook Photo">
+
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="Mess Hall">
+
+        <img src="https://images.unsplash.com/photo-1625943555419-56a2cb596640" alt="Tiffin Service">
+    </div>
+</section>
+
+<!-- HYGIENE -->
+<section>
+    <h2 class="section-title">Care & Hygiene</h2>
+
+    <div class="hygiene">
+        <p>✔ We use fresh vegetables and quality ingredients daily.</p>
+        <p>✔ Our kitchen is cleaned and sanitized regularly.</p>
+        <p>✔ Food is prepared with proper hygiene and care.</p>
+        <p>✔ Healthy homemade food with balanced nutrition.</p>
+        <p>✔ Safe packing for tiffin delivery service.</p>
+    </div>
+</section>
+
+<!-- LOGIN FORM -->
+<section>
+    <h2 class="section-title">Login For Our Services</h2>
+
+    <form>
+        <input type="text" placeholder="Enter Your Name" required>
+
+        <input type="email" placeholder="Enter Your Email" required>
+
+        <input type="tel" placeholder="Enter Mobile Number" required>
+
+        <textarea rows="4" placeholder="Enter Address"></textarea>
+
+        <button type="submit">Register Now</button>
+    </form>
+</section>
+
+<!-- CONTACT -->
+<div class="contact">
+    <h2>Contact Us</h2>
+
+    <p><b>Address:</b> Vishwa Food Mess, Main Road, Maharashtra</p>
+
+    <p><b>Mobile:</b> +91 9876543210</p>
+
+    <p><b>Email:</b> vishwafoodmess@gmail.com</p>
+</div>
+
+<footer>
+    <p>© 2026 Vishwa Food Mess | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishwa Mobile Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:#111;
+    position:sticky;
+    top:0;
+}
+
+nav h1{
+    color:#00ffcc;
+    font-size:32px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffcc;
+}
+
+/* Hero Section */
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9') no-repeat center center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.7);
+    padding:40px;
+    border-radius:15px;
+}
+
+.hero h2{
+    font-size:55px;
+    color:#00ffcc;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+/* Products */
+.products{
+    padding:60px 40px;
+}
+
+.products h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#00ffcc;
+    font-size:40px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,255,204,0.2);
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin-top:15px;
+    color:#00ffcc;
+}
+
+.price{
+    font-size:22px;
+    margin:10px 0;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:#00ffcc;
+    color:black;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:white;
+}
+
+/* About */
+.about{
+    padding:60px 40px;
+    background:#111;
+    text-align:center;
+}
+
+.about h2{
+    color:#00ffcc;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+/* Contact */
+.contact{
+    padding:60px 40px;
+    text-align:center;
+}
+
+.contact h2{
+    color:#00ffcc;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:20px;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h1>Vishwa Mobiles</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Mobiles</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Latest Smartphones</h2>
+        <p>Buy Premium Mobile Phones at Best Prices</p>
+    </div>
+</section>
+
+<!-- Products -->
+<section class="products" id="products">
+
+    <h2>Our Mobiles</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5" alt="">
+            <h3>iPhone 15 Pro</h3>
+            <p class="price">₹1,29,999</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97" alt="">
+            <h3>Samsung S24 Ultra</h3>
+            <p class="price">₹1,09,999</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505" alt="">
+            <h3>OnePlus 12</h3>
+            <p class="price">₹64,999</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e" alt="">
+            <h3>Realme GT</h3>
+            <p class="price">₹34,999</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        Welcome to Vishwa Mobiles. We provide the latest smartphones
+        from top brands like Apple, Samsung, OnePlus, Vivo, Oppo and more.
+        Our goal is to deliver premium quality mobiles at affordable prices.
+    </p>
+
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: vishwamobiles@gmail.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Address: Maharashtra, India</p>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Vishwa Mobiles | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
